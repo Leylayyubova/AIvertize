@@ -1,0 +1,184 @@
+header {
+    margin: 32px 0;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            position: relative;
+            max-width: 500px;
+            width: 87%;
+
+            #search {
+                padding: 10px 15px;
+                border: 1px solid #ddd;
+                border-radius: 30px;
+                width: 87%;
+                font-size: 16px;
+                outline: none;
+            }
+
+            #search:focus {
+                width: 87%;
+                border-color: #FFB800;
+            }
+
+            button {
+                background-color: transparent;
+                border: none;
+                padding: 10px;
+                border-radius: 50%;
+                color: #000000;
+                font-size: 18px;
+                position: absolute;
+                right: 75px;
+            }
+
+        }
+
+        h4 {
+            font-family: Poppins;
+            font-size: 28px;
+            font-weight: 500;
+            line-height: 36px;
+            margin-right: 26px;
+        }
+
+        .all {
+            display: flex;
+            align-items: center;
+
+            ul {
+                display: flex;
+                width: 399px;
+                height: 48px;
+                padding: 12px 16px 12px 16px;
+                gap: 60px;
+                border-radius: 39px;
+
+                li {
+                    a {
+                        font-family: Poppins;
+                        color: #000000;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 24px;
+                    }
+                }
+            }
+
+            .menu {
+                border: 1px solid #D2D2D2;
+                width: 321px;
+                margin-right: 36px;
+                gap: 45px;
+
+                li {
+                    a {
+                        font-size: 19px;
+                    }
+                }
+            }
+
+            .dark-mode {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                position: relative; 
+            
+                input {
+                    width: 0;
+                    height: 0;
+                    visibility: hidden;
+                }
+            
+                .navToggle {
+                    background: transparent;
+                    border: 1px solid #D2D2D2;
+                    width: 68px;
+                    height: 30px;
+                    transition: 0.3s;
+                    border-radius: 17px;
+                    display: flex;
+                    justify-content: space-between; 
+                    position: relative;
+            
+                    img {
+                        z-index: 2;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%); 
+                    }
+                    .dark {
+                        filter: invert(100%) brightness(100%) contrast(100%);
+                      }
+            
+                    &::after {
+                        content: "";
+                        width: 33px;
+                        height: 33px;
+                        position: absolute;
+                        top: -2px;
+                        left: -2px;
+                        background: black;
+                        border-radius: 50%;
+                        transition: 0.3s;
+                    }
+            
+                    &:active::after {
+                        width: 100%;
+                    }
+            
+                    .light {
+                        left: 14px;
+                    }
+            
+                    .dark {
+                        left: 50px;
+                    }
+                }
+            
+                input:checked + .navToggle::after {
+                    left: 34px;
+                    background: rgb(15, 15, 15);
+                }
+            }    
+            
+            .bell {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-left: 24px;
+                gap: 24px;
+
+                i {
+                    cursor: pointer;
+                    font-size: 22px;
+                    border: 1px solid #D2D2D2;
+                    border-radius: 50%;
+                    padding: 8px;
+                }
+
+                .img {
+                    width: 40px;
+                    height: 40px;
+                    border: 1px solid #000;
+                    border-radius: 50%;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
